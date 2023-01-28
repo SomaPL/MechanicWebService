@@ -13,5 +13,7 @@ namespace MechanicWebService.Models
         [Required]
         public string Phone { get; set; }
         public string Address { get; set; }
+        [Required]
+        public string CustomerID { get; set; }
     }
 }
