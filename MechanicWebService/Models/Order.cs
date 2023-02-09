@@ -2,7 +2,7 @@
 
 namespace MechanicWebService.Models
 {
-    public class Orders
+    public class Order
     {
         [Key]
         public int Id { get; set; }
