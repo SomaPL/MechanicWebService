@@ -10,6 +10,7 @@ namespace MechanicWebService.Data
         public DbSet<Models.Customer> Customers { get; set; } = default!;
         public DbSet<Models.Mechanic> Mechanics { get; set; } = default!;
         public DbSet<Models.Order> Orders { get; set; } = default!;
+        public DbSet<Models.ServiceRequest> ServiceRequests { get; set; } = default!;
 
     }
 }

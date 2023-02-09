@@ -28,12 +28,29 @@ namespace MechanicWebService.Data
                     VIN = "12345678900987654321",
                     Year = "2006"
                 };
+                if (context.Customers.Any())
+                {
+                    return; // dane już zostały dodane do bazy danych
+                }
                 var customer = new Customer()
                 {
                     FirstName = "Jan",
                     LastName = "Koniczny",
                     Phone = "123456789",
                     Address = "Kraków Św.Filipa"
+                };
+                if (context.ServiceRequests.Any())
+                {
+                    return; // dane już zostały dodane do bazy danych
+                }
+                var serviceRequest = new ServiceRequest()
+                {
+                    Title = "Wymiana opon",
+                    Description="Prosze wymienić tylnie opony",
+                    Model = "Astra",
+                    Mark = "Opel",
+                    VIN = "12345678900987654321",
+                    Year = "2006"
                 };
 
 
