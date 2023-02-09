@@ -28,9 +28,17 @@ namespace MechanicWebService.Data
                     VIN = "12345678900987654321",
                     Year = "2006"
                 };
-                
+                var customer = new Customer()
+                {
+                    FirstName = "Jan",
+                    LastName = "Koniczny",
+                    Phone = "123456789",
+                    Address = "Kraków Św.Filipa"
+                };
+
 
                 context.Cars.Add(car);
+                context.Customers.Add(customer);
                 context.SaveChanges();
             }
         }
