@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MechanicWebService.Data
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext:IdentityDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<Models.Car> Cars { get; set; } = default!;
