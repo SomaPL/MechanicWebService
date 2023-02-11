@@ -13,31 +13,31 @@ namespace MechanicWebService.Controllers
         }
         public IActionResult Index()
         {
-            var ToList = _context.ServiceRequests.ToList();
-            return View(ToList);
+            //var ToList = _context.ServiceRequests.ToList();
+            return View();
         }
         public IActionResult Create()
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Create([FromForm] ServiceRequest serviceViewModel)
-        {
-            if (ModelState.IsValid)
-            {
-                var servicerequest = new ServiceRequest()
-                {
-                    Title = serviceViewModel.Title,
-                    Description = serviceViewModel.Description,
-                    Model = serviceViewModel.Model,
-                    Mark = serviceViewModel.Mark,
-                    VIN = serviceViewModel.VIN,
-                    Year = serviceViewModel.Year,
-                };
-                _context.ServiceRequests.Add(servicerequest);
-                _context.SaveChanges();
-            }
-            return View(serviceViewModel);
-        }
+        //[HttpPost]
+        //public IActionResult Create([FromForm] ServiceRequest serviceViewModel)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var servicerequest = new ServiceRequest()
+        //        {
+        //            Title = serviceViewModel.Title,
+        //            Description = serviceViewModel.Description,
+        //            Model = serviceViewModel.Model,
+        //            Mark = serviceViewModel.Mark,
+        //            VIN = serviceViewModel.VIN,
+        //            Year = serviceViewModel.Year,
+        //        };
+        //        _context.ServiceRequests.Add(servicerequest);
+        //        _context.SaveChanges();
+        //    }
+        //    return View(serviceViewModel);
+        //}
     }
 }

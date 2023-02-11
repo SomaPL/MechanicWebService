@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MechanicWebService.Models.ServiceRequest>;
+﻿@*@model IEnumerable<MechanicWebService.Models.ServiceRequest>;*@
 @{
     ViewData["Title"] = "Workshop";
 }
@@ -7,7 +7,7 @@
     <h1 class="display-6">@ViewData["Title"]</h1>
     <a asp-action="Create" class="btn btn-success">Dodaj nowego studenta</a>
 </div>
-<table class="table">
+@*<table class="table">
     <thead>
         <tr>
             <th>@Html.DisplayNameFor(model => model.Title)</th>
@@ -48,4 +48,4 @@
             </tr>
         }
     </tbody>
-</table>
+</table>*@
