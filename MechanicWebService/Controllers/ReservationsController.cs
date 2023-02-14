@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MechanicWebService.Data;
 using MechanicWebService.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MechanicWebService.Controllers
 {
+    [Authorize]
     public class ReservationsController : Controller
     {
         private readonly AppDbContext _context;

@@ -1,9 +1,11 @@
 ﻿using MechanicWebService.Data;
 using MechanicWebService.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MechanicWebService.Controllers
 {
+    [Authorize]
     public class WorkShopController : Controller
     {
         private readonly AppDbContext _context;
