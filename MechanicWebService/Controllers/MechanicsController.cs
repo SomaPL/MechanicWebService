@@ -56,7 +56,7 @@ namespace MechanicWebService.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MechanicId,FirstName,LastName,Experiance,Specialization")] Mechanic mechanic)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 _context.Add(mechanic);
                 await _context.SaveChangesAsync();
@@ -93,7 +93,7 @@ namespace MechanicWebService.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 try
                 {

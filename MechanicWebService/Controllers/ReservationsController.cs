@@ -52,7 +52,7 @@ namespace MechanicWebService.Controllers
         {
             ViewData["CustomerId"] = new SelectList(_context.Customers, "CustomerId", "FirstName");
             ViewData["MechanicId"] = new SelectList(_context.Mechanics, "MechanicId", "FirstName");
-            ViewData["ServiceId"] = new SelectList(_context.Services, "ServiceId", "ServiceId");
+            ViewData["ServiceId"] = new SelectList(_context.Services, "ServiceId", "Description");
             return View();
         }
 
@@ -63,7 +63,7 @@ namespace MechanicWebService.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ReservationId,CustomerId,MechanicId,ServiceId,DateAndTime")] Reservation reservation)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 _context.Add(reservation);
                 await _context.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace MechanicWebService.Controllers
             }
             ViewData["CustomerId"] = new SelectList(_context.Customers, "CustomerId", "FirstName", reservation.CustomerId);
             ViewData["MechanicId"] = new SelectList(_context.Mechanics, "MechanicId", "FirstName", reservation.MechanicId);
-            ViewData["ServiceId"] = new SelectList(_context.Services, "ServiceId", "ServiceId", reservation.ServiceId);
+            ViewData["ServiceId"] = new SelectList(_context.Services, "ServiceId", "Description", reservation.ServiceId);
             return View(reservation);
         }
 
@@ -106,7 +106,7 @@ namespace MechanicWebService.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 try
                 {
