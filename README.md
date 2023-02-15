@@ -12,9 +12,17 @@ Aplikacja posiada następujące funkcjonalności:
 + Płatności: Klienci mogą dokonywać płatności za rezerwowane usługi. W systemie dostępne są różne metody płatności, takie jak karta kredytowa czy przelew.
 + Wypożyczalnia: Klienci mogą zobaczyć jakie samochody są dostępne
 
+
+
 ## Technologie
 
 Aplikacja została napisana w technologii ASP.NET, z wykorzystaniem języka programowania C#. W bazie danych użyto SQLLite Aplikacja wykorzystuje także framework ASP.NET Identity, który umożliwia autoryzację oraz uwierzytelnienie użytkowników.
 
 Instalacja
 Aby uruchomić aplikację lokalnie, należy sklonować repozytorium oraz zainstalować niezbędne zależności poprzez menadżer pakietów NuGet. Następnie, jeśli aplikacja nie uruchamia się poprawnie usunąć aktualną bazę oraz migracje następnie należy utworzyć bazę danych oraz wprowadzić niezbędne migracje. Po wykonaniu tych kroków, aplikacja powinna działać poprawnie.
+
+## Informacje
+
+Domyślnie dodane konta
++ Admin: Login: root@gmail.com hasło: Admin1!
++ Klient: Login: userek1@gmail.com  hasło: Test1!
