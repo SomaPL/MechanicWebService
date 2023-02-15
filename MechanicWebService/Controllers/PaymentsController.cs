@@ -48,6 +48,7 @@ namespace MechanicWebService.Controllers
         }
 
         // GET: Payments/Create
+        [Authorize(Roles = "Administrator")]
         public IActionResult Create()
         {
             ViewData["ReservationId"] = new SelectList(_context.Reservations, "ReservationId", "ReservationId");
@@ -59,6 +60,7 @@ namespace MechanicWebService.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Create([Bind("PaymentId,ReservationId,PaymentMethod,Amount")] Payment payment)
         {
             if (!ModelState.IsValid)
