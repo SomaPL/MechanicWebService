@@ -7,11 +7,16 @@ namespace MechanicWebService.Models
         [Key]
         public int CustomerId { get; set; }
         [Required]
+        [Display(Name = "Imię")]
         public string FirstName { get; set; }
         [Required]
+        [Display(Name = "Nazwisko")]
         public string LastName { get; set; }
         [Required]
+        [Display(Name = "Numer Telefonu")]
         public string PhoneNumber { get; set; }
+        [Required]
+        [Display(Name = "Addres")]
         public string Address { get; set; }
 
 

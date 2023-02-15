@@ -92,7 +92,7 @@ namespace MechanicWebService.Controllers
             }
             ViewData["CustomerId"] = new SelectList(_context.Customers, "CustomerId", "FirstName", reservation.CustomerId);
             ViewData["MechanicId"] = new SelectList(_context.Mechanics, "MechanicId", "FirstName", reservation.MechanicId);
-            ViewData["ServiceId"] = new SelectList(_context.Services, "ServiceId", "ServiceId", reservation.ServiceId);
+            ViewData["ServiceId"] = new SelectList(_context.Services, "ServiceId", "Description", reservation.ServiceId);
             return View(reservation);
         }
 
