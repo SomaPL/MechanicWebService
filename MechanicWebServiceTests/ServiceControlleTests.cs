@@ -32,7 +32,7 @@ namespace MechanicWebServiceTests
         public void Service_Price_Should_Be_Greater_Than_Zero()
         {
             // Arrange
-            var service = new Service { ServiceId = 1, Description = "Oil change", Price = -10 };
+            var service = new Service { ServiceId = 4, Description = "Oil change", Price = -10 };
 
             // Act
             var validationResults = ValidateModel(service);
