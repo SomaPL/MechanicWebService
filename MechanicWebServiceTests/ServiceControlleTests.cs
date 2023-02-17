@@ -1,6 +1,8 @@
 ﻿using MechanicWebService.Data;
 using MechanicWebService.Models;
+using MechanicWebService.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,6 +24,7 @@ namespace MechanicWebServiceTests
             var validationResults = ValidateModel(service);
 
             // Assert
+            //Jeżeli nie przechodzi to dobrze
             Assert.Single(validationResults, r => r.MemberNames.Contains("Description") && r.ErrorMessage.Contains("required"));
         }
 
@@ -35,6 +38,7 @@ namespace MechanicWebServiceTests
             var validationResults = ValidateModel(service);
 
             // Assert
+            //Jeżeli nie przechodzi to dobrze
             Assert.Single(validationResults, r => r.MemberNames.Contains("Price") && r.ErrorMessage.Contains("greater than 0"));
         }
 
