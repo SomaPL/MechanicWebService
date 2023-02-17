@@ -10,6 +10,7 @@ namespace MechanicWebService.Models
         public int ReservationId { get; set; }
         [Display(Name = "Metoda Płatności")]
         public string PaymentMethod { get; set; }
+        [Required]
         [Display(Name = "Należność")]
         public decimal Amount { get; set; }
 
