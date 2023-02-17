@@ -4,11 +4,12 @@ namespace MechanicWebService.Models
 {
     public class Service
     {
+        private const string V = "Pole Wymagane";
         public int ServiceId { get; set; }
-        [Required]
+        [Required(ErrorMessage = V)]
         [Display(Name = "Opis")]
         public string Description { get; set; }
-        [Required]
+        [Required(ErrorMessage = V)]
         [Display(Name = "Koszt")]
         public decimal Price { get; set; }
 

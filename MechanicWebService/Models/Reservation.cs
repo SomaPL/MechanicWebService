@@ -5,16 +5,17 @@ namespace MechanicWebService.Models
 {
     public class Reservation
     {
-        [Required]
+        private const string V = "Pole Wymagane";
+        [Required(ErrorMessage = V)]
         [Display(Name = "Numer Rezerwacji")]
         public int ReservationId { get; set; }
-        [Required]
+        [Required(ErrorMessage = V)]
         [Display(Name = "Imię Klienta")]
         public int CustomerId { get; set; }
-        [Required]
+        [Required(ErrorMessage = V)]
         [Display(Name = "Imię Mechanika")]
         public int MechanicId { get; set; }
-        [Required]
+        [Required(ErrorMessage = V)]
         [Display(Name = "Nazwa Usługi")]
         public int ServiceId { get; set; }
         [Display(Name = "Data i Godzina")]
