@@ -3,6 +3,7 @@ using MechanicWebService.Models;
 using MechanicWebService.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Moq;
+using NuGet.Protocol.Core.Types;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -62,7 +63,7 @@ namespace MechanicWebServiceTests
         //    await _repository.AddAsync(payment);
 
         //    // Assert
-        //    _mockContext.Verify(expression: c => c.Payments.AddAsync(payment), Times.Once);
+        //    _mockContext.Verify(expression: c => c.PaymentRepository.AddAsync(payment), Times.Once);
         //    _mockContext.Verify(c => c.SaveChangesAsync(default), Times.Once);
         //}
 
